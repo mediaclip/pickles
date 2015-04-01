@@ -17,7 +17,7 @@
 
 namespace PicklesDoc.Pickles
 {
-    public class MarkdownProvider
+    public class MarkdownProvider : IMarkdownProvider
     {
         private readonly MarkdownDeep.Markdown markdown;
 
