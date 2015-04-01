@@ -110,11 +110,15 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
           {
             node = this.featureNodeFactory.Create(rootNode.OriginalLocation, file);
           }
-          catch (Exception)
+          catch (Exception ex)
           {
             if (log.IsWarnEnabled)
             {
               log.Warn("The file, {0}, will be ignored because it could not be read in properly", file.FullName);
+            }
+            if (log.IsDebugEnabled)
+            {
+              log.Debug("Exception received: {0}", ex);
             }
           }
 
