@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>Pickles</id>
-    <version>@build.number@</version>
+    <id>Pickles.Powershell.Mediaclip</id>
+    <version>1.0.1</version>
     <title>Pickles - The Open Source Living Documentation Generator</title>
     <authors>PicklesDoc and contributors</authors>
     <owners>Jeffrey Cameron, Dirk Rombauts</owners>
@@ -36,7 +36,7 @@
     <iconUrl>https://cdn.rawgit.com/picklesdoc/pickles/master/pickles.jpeg</iconUrl>
   </metadata>
   <files>
-    <file src="PicklesDoc.Pickles.PowerShell.dll" target="tools" />
+    <file src="\bin\Debug\PicklesDoc.Pickles.PowerShell.dll" target="tools" />
     <file src="init.ps1" target="tools\init.ps1" />
   </files>
 </package>
