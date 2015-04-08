@@ -28,11 +28,6 @@ namespace PicklesDoc.Pickles
 			this.markdownify = new Markdownify();
 		}
 
-		~MarkdownifyProvider()
-		{
-			this.markdownify.Dispose();
-		}
-
 		public string Transform(string text)
 		{
 			var transform = markdownify.Transform(text);
