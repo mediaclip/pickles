@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>Pickles</id>
-    <version>@build.number@</version>
+    <id>Pickles.Powershell.Mediaclip</id>
+    <version>2.0.2</version>
     <title>Pickles - The Open Source Living Documentation Generator</title>
     <authors>PicklesDoc and contributors</authors>
     <owners>Jeffrey Cameron, Dirk Rombauts</owners>
@@ -36,21 +36,27 @@
     <iconUrl>https://cdn.rawgit.com/picklesdoc/pickles/master/pickles.jpeg</iconUrl>
   </metadata>
   <files>
-    <file src="Autofac.dll" target="tools" />
-    <file src="AutoMapper.dll" target="tools" />
-    <file src="ClosedXML.dll" target="tools" />
-    <file src="DocumentFormat.OpenXml.dll" target="tools" />
-    <file src="Gherkin.dll" target="tools" />
-    <file src="MarkdownDeep.dll" target="tools" />
-    <file src="NDesk.Options.dll" target="tools" />
-    <file src="Newtonsoft.Json.dll" target="tools" />
-    <file src="NGenerics.dll" target="tools" />
-    <file src="NLog.dll" target="tools" />
-    <file src="PicklesDoc.Pickles.Library.dll" target="tools" />
-    <file src="PicklesDoc.Pickles.ObjectModel.dll" target="tools" />
-    <file src="PicklesDoc.Pickles.TestFrameworks.dll" target="tools" />
-    <file src="PicklesDoc.Pickles.PowerShell.dll" target="tools" />
-    <file src="System.IO.Abstractions.dll" target="tools" />
+    <file src="\bin\debug\Autofac.dll" target="tools" />
+    <file src="\bin\debug\AutoMapper.dll" target="tools" />
+    <file src="\bin\debug\ClosedXML.dll" target="tools" />
+    <file src="\bin\debug\DocumentFormat.OpenXml.dll" target="tools" />
+    <file src="\bin\debug\Gherkin.dll" target="tools" />
+    <file src="\bin\debug\MarkdownDeep.dll" target="tools" />
+    <file src="\bin\debug\NDesk.Options.dll" target="tools" />
+    <file src="\bin\debug\Newtonsoft.Json.dll" target="tools" />
+    <file src="\bin\debug\NGenerics.dll" target="tools" />
+    <file src="\bin\debug\NLog.dll" target="tools" />
+    <file src="\bin\debug\PicklesDoc.Pickles.Library.dll" target="tools" />
+    <file src="\bin\debug\PicklesDoc.Pickles.ObjectModel.dll" target="tools" />
+    <file src="\bin\debug\PicklesDoc.Pickles.TestFrameworks.dll" target="tools" />
+    <file src="\bin\debug\PicklesDoc.Pickles.PowerShell.dll" target="tools" />
+    <file src="\bin\debug\System.IO.Abstractions.dll" target="tools" />
+    <file src="\bin\debug\Strike.V8.dll" target="tools" />
+    <file src="\bin\debug\ClearScriptV8-64.dll" target="tools" />
+    <file src="\bin\debug\ClearScriptV8-32.dll" target="tools" />
+    <file src="\bin\debug\ClearScript.dll" target="tools" />
+    <file src="\bin\debug\v8-x64.dll" target="tools" />
+    <file src="\bin\debug\v8-ia32.dll" target="tools" />
     <file src="init.ps1" target="tools\init.ps1" />
   </files>
 </package>

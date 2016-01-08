@@ -43,6 +43,10 @@
       <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ClearScript, Version=5.4.4.0, Culture=neutral, PublicKeyToken=935d0c957da47c73, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClearScript.V8.5.4.4\lib\net40\ClearScript.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ClosedXML, Version=0.76.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.76.0\lib\net40-client\ClosedXML.dll</HintPath>
       <Private>True</Private>
@@ -73,6 +77,10 @@
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.2.3\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Strike.V8, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Strike.V8.1.3.0\Lib\NET452\Strike.V8.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -180,6 +188,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="IMarkdownProvider.cs" />
     <Compile Include="LanguageServices.cs" />
+    <Compile Include="MarkdownifyProvider.cs" />
     <Compile Include="MarkdownProvider.cs" />
     <Compile Include="ObjectModel\KeywordResolver.cs" />
     <Compile Include="ObjectModel\Mapper.cs" />
@@ -197,6 +206,11 @@
     <Compile Include="TestFrameworks\NullTestResults.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Licenses\ClearScript.main.license" />
+    <None Include="Licenses\v8.main.license" />
+    <None Include="Licenses\v8.strongtalk.license" />
+    <None Include="Licenses\v8.v8.license" />
+    <None Include="Licenses\v8.valgrind.license" />
     <None Include="packages.config" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -315,6 +329,13 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+if not exist "$(TargetDir)" md "$(TargetDir)"
+xcopy /s /y "$(SolutionDir)packages\ClearScript.V8.5.4.4\tools\native\x86\*.*" "$(TargetDir)"
+if not exist "$(TargetDir)" md "$(TargetDir)"
+xcopy /s /y "$(SolutionDir)packages\ClearScript.V8.5.4.4\tools\native\amd64\*.*" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
